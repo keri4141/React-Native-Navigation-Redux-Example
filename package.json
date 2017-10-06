@@ -8,7 +8,12 @@
 	},
 	"dependencies": {
 		"react": "16.0.0-alpha.12",
-		"react-native": "0.47.1"
+		"react-native": "0.47.1",
+		"react-native-navigation": "^1.1.235",
+		"react-redux": "^5.0.6",
+		"redux": "^3.7.2",
+		"redux-thunk": "^2.2.0",
+		"seamless-immutable": "^7.1.2"
 	},
 	"devDependencies": {
 		"babel-jest": "21.2.0",
