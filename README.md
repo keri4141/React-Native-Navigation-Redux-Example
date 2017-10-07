@@ -75,7 +75,7 @@ export default class  App extends Component {
                     screen: 'ReactNativeReduxExample.HomeTab',
                     icon: require('./img/checkmark.png'),
                     selectedIcon: require('./img/checkmark.png'),
-                    title: 'Kreu',
+                    title: 'Hey',
                     overrideBackPress: false, //this can be set to true for android
                     navigatorStyle: {}
                 },
@@ -85,7 +85,7 @@ export default class  App extends Component {
                     screen: 'ReactNativeReduxExample.SearchTab',
                     icon: require('./img/checkmark.png'),
                     selectedIcon: require('./img/checkmark.png'),
-                    title: 'Kreu',
+                    title: 'Hey',
                     navigatorStyle: {}
 
                     
