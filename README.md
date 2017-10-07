@@ -22,6 +22,31 @@ $ react-native run-android
 # Explanation of React-Native-Navigation Wix with Redux
 
 
+React Native version: 0.47.1
+
+##### Folder Structure:
+
+```
+
+/src
+  --/actions
+     actiontypes.js
+     index.js
+  --/components
+     --/screens
+        homeTab.js
+        login.js
+        screens.js
+        searchTab.js
+  --/img
+     checkmark.png
+  --/reducers
+     index.js
+     rootReducer.js
+ app.js
+ 
+```
+
 ##### app.js
 The app component will behave as our overall application, and within app the navigators will exist in there
 ```
@@ -97,6 +122,26 @@ export default class  App extends Component {
             default: //no root found
           }
     }
+```
+
+# Passing Store to components
+
+To have your components access to the states that you are keeping track of through redux, you pass the store and provider when registering your navigation components.
+
+##### src/components/screens.js
+```
+
+import { Navigation } from 'react-native-navigation';
+import Login from './login';
+import HomeTab from './homeTab';
+import SearchTab from './searchTab';
+
+export default (store, Provider) =>  {
+Navigation.registerComponent('ReactNativeReduxExample.Login', () => Login, store, Provider);
+Navigation.registerComponent('ReactNativeReduxExample.HomeTab', () => HomeTab, store, Provider);
+Navigation.registerComponent('ReactNativeReduxExample.SearchTab', () => SearchTab, store, Provider);
+}
+
 ```
 
 # How the root state is managed via reducers
