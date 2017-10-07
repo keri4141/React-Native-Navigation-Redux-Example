@@ -1,4 +1,26 @@
+
+##### Installation to run
+
+```
+$ npm install
+```
+
+##### Then to run for iOS
+
+```
+$ react-native run-ios
+
+```
+
+##### For Android
+
+```
+$ react-native run-android
+```
+
+
 # Explanation of React-Native-Navigation Wix with Redux
+
 
 ##### app.js
 The app component will behave as our overall application, and within app the navigators will exist in there
@@ -184,7 +206,7 @@ export function login() {
   };
 }
 ```
-##### src/components/screens/username.js
+##### src/components/screens/login.js
 Now that we have our actions defined, we created a method called onLoginPress, which will dispatch the action **login()**. 
 
 We then must make this component be literally connected to redux's store so that we can call dispatch. We do this by running: **export default connect()(Login)**
@@ -210,10 +232,16 @@ export default connect()(Login);
 Redux is now set up with your wix navigator and a component which handles the navigation state.
 
 # References:
+
+**React-Native-Navigation Wix**
+https://wix.github.io/react-native-navigation/#/
+
 **Redux**
 https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree
+
 **Redux thunk**
 https://www.youtube.com/watch?v=1QI-UE3-0PU
+
 ## Known Issues
 On Android, when a user presses the hardware's backbutton, the application is minimized but when it is re-opened, it behaves as if it is launching for the first time, bringing you back to the single screen view. This behavior does not occur when the user presses the hardware's home button or 'the right button on the android'.
 
